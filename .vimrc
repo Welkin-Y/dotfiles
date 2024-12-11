@@ -14,13 +14,20 @@ set confirm
 
 
 function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+    let l:filename = expand('%:p')  
+    let g:git_branch = system('bash -c "echo -n $(git rev-parse --abbrev-ref HEAD)"')
 endfunction
 
 function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+    if exists("g:git_branch")
+        return '  '.g:git_branch.' '
+    else 
+        return ' not tracked '
+    endif
 endfunction
+
+autocmd BufEnter * call GitBranch()
+autocmd ShellCmdPost * call GitBranch()
 
 set statusline=
 set statusline+=%#PmenuSel#
