@@ -51,3 +51,10 @@ require("lazy").setup({
     },
   },
 })
+
+-- Otherwise :ConfigureGTest will not show as command
+require("neotest").setup({
+  adapters = {
+    require("neotest-gtest").setup({}),
+  },
+})
