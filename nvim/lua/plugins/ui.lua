@@ -2,12 +2,15 @@ return {
   {
     "folke/noice.nvim",
     opts = {
+      presets = {
+        command_palette = false,
+      },
       cmdline = {
         view = "cmdline",
       },
-      popupmenu = {
-        backend = "cmp",
-      },
+      -- popupmenu = {
+      --   backend = "cmp",
+      -- },
     },
   },
   {
