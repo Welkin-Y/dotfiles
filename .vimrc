@@ -11,6 +11,7 @@ set ignorecase
 set smartcase
 set wrap
 set confirm
+set mouse=a
 
 
 function! GitBranch()
