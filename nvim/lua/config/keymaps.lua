@@ -7,3 +7,6 @@ local opts = { noremap = true, silent = true }
 --  Press jk fast to enter
 local map = vim.keymap.set
 map("i", "jk", "<ESC>", opts)
+map("i", "kj", "<ESC>", opts)
+map("t", "jk", [[<C-\><C-n>]], opts)
+map("t", "kj", [[<C-\><C-n>]], opts)

@@ -1,4 +1,5 @@
 return {
+  { "lunarvim/darkplus.nvim" },
   {
     "folke/tokyonight.nvim",
     opts = {

@@ -58,3 +58,9 @@ require("neotest").setup({
     require("neotest-gtest").setup({}),
   },
 })
+
+-- make cmd popupmenu untransparent
+vim.cmd("hi Pmenu blend=0")
+
+-- stack jump
+vim.cmd("set jop=stack")
