@@ -33,6 +33,7 @@ return {
             end,
             cmd = "fortune -s | cowsay",
             height = 10,
+            width = 50,
             padding = 1,
             indent = 5,
           },
